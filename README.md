@@ -4,12 +4,23 @@ A project based on original Traversy tutorial, By the time it was made, this pro
 
 ## Dependencies
 - Node
+- Materialize CDN (or any styleing tool if you want)
+- Electron (Duh!?)
+- Electron-packager (better than default electron-forge)
 
 ## Creation Command
 
     npx create-electron-app app-name
 
 ## Build process
+
+To start after clone:
+    npm i 
+To run the app:
+    npm start
+__Note:__ You need to change the environment variable to development inside index.js file, in the line below:
+    process.env.NODE_ENV = 'production';
+To create the application outputs:
 
 ## Original source
 
