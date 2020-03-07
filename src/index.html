@@ -2,9 +2,15 @@
 <html>
   <head>
     <meta charset="UTF-8" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Shopping list</title>
     <link rel="stylesheet" href="index.css" />
   </head>
@@ -14,7 +20,8 @@
         <div class="nav-wrapper">
           <a class="brand-logo center">
             <i class="material-icons">shopping_cart</i>
-            Shopping List</a>
+            Shopping List</a
+          >
         </div>
       </nav>
       <ul></ul>
@@ -29,9 +36,9 @@
 
       // Add item
       ipcRenderer.on("item:add", function(event, item) {
-        ul.className = 'collection';
+        ul.className = "collection";
         const li = document.createElement("li");
-        li.className = 'collection-item';
+        li.className = "collection-item";
         const itemText = document.createTextNode(item);
         li.appendChild(itemText);
         ul.appendChild(li);
@@ -39,17 +46,17 @@
 
       // Items clear
       ipcRenderer.on("item:clear", function() {
-        ul.innerHTML = '';
-        ul.className = '';
+        ul.innerHTML = "";
+        ul.className = "";
       });
 
       // Individual item clear
-      ul. addEventListener('dblclick', removeItem);
+      ul.addEventListener("dblclick", removeItem);
 
-      function removeItem(event){
+      function removeItem(event) {
         event.target.remove();
-        if(ul.children.length == 0){
-          ul.className = '';
+        if (ul.children.length == 0) {
+          ul.className = "";
         }
       }
     </script>

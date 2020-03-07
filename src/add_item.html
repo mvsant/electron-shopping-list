@@ -1,34 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <head>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+    />
     <link rel="stylesheet" href="index.css" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Add shopping list item</title>
-</head>
-<body>
+  </head>
+  <body>
     <div class="container" id="add-item-container">
-        <form action="">
-            <div>
-                <label>Enter item:</label>
-                <input type="text" id="item" autofocus>
-            </div>
-            <button type="submit" class ="btn waves-effect waves-light">Add Item</button>
-        </form>
+      <form action="">
+        <div>
+          <label>Enter item:</label>
+          <input type="text" id="item" autofocus />
+        </div>
+        <button type="submit" class="btn waves-effect waves-light">
+          Add Item
+        </button>
+      </form>
     </div>
 
     <script>
-        const electron = require('electron');
-        const {ipcRenderer} = electron;
+      const electron = require("electron");
+      const { ipcRenderer } = electron;
 
-        const form = document.querySelector('form');
-        form.addEventListener('submit', submiitForm);
+      const form = document.querySelector("form");
+      form.addEventListener("submit", submiitForm);
 
-        function submiitForm(event){
-            event.preventDefault();
-            const item = document.querySelector('#item').value;
-            ipcRenderer.send('item:add', item);
-        }
+      function submiitForm(event) {
+        event.preventDefault();
+        const item = document.querySelector("#item").value;
+        ipcRenderer.send("item:add", item);
+      }
     </script>
-</body>
+  </body>
 </html>
