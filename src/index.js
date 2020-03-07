@@ -86,3 +86,17 @@ const mainMenuTemplate = [
 if(process.platform == 'darwin'){
   mainMenuTemplate.unshift({});
 }
+
+// Add devtools if not in production
+if(process.env.NODE_ENV !== 'production'){
+  mainMenuTemplate.push({
+    accelerator: 'CmdOrCtrl+I',
+    label: 'Developer Tools',
+    click(item, focusedWindow){
+      focusedWindow.toggleDevTools();
+    }
+  },
+  {
+    role: 'reload'
+  });
+};
