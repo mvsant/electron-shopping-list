@@ -72,12 +72,14 @@ const mainMenuTemplate = [
     label: 'File',
     submenu: [
       {
+        accelerator: 'Alt+N',
         label: 'Add item',
         click(){
           createAddWindow();
         }
       },
       {
+        accelerator: 'CmdOrCtrl+Shift+D',
         label: 'Clear items',
         click(){
           mainWindow.webContents.send('item:clear');
