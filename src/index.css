@@ -18,3 +18,11 @@ footer {
   padding: 1%;
   background-color: peachpuff;
 }
+
+ul {font-size: large;}
+
+#add-item-container {
+  font-size:5vw;
+  text-align:center;
+  margin:5% auto;
+}
