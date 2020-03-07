@@ -11,6 +11,8 @@ A project based on original Traversy tutorial, By the time it was made, this pro
 ## Creation Command
 
     npx create-electron-app app-name
+    
+__Can be created like the online tutorial as well__
 
 ## Build process
 
@@ -36,3 +38,7 @@ To create the application outputs:
 ## Original source
 
 [Build an Electron App in Under 60 Minutes](https://www.youtube.com/watch?v=kN1Czs0m1SU&t=302s)
+
+## electron packager tutorial
+
+[Electron packager tutorial ](https://www.christianengvall.se/electron-packager-tutorial/)
