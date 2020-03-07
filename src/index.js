@@ -28,6 +28,21 @@ app.on('ready', function(){
 // Create menu template
 const menuTemplate = [
   {
-    label: 'File'
+    label: 'File',
+    submenu: [
+      {
+        label: 'Add item'
+      },
+      {
+        label: 'Clear items'
+      },
+      {
+        accelerator: 'CmdOrCtrl+Q',
+        label: 'Quit',
+        click(){
+          app.quit();
+        }
+      }
+    ]
   }
 ];
