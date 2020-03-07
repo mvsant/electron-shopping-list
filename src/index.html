@@ -2,13 +2,18 @@
 <html>
   <head>
     <meta charset="UTF-8" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>Shopping list</title>
     <link rel="stylesheet" href="index.css" />
   </head>
-  <body>
-    <h1>💖 Hello World!</h1>
-    <p>Welcome to your Electron application.</p>
-    <ul></ul>
+  <body class="container">
+    <nav>
+      <div class="nav-wrapper">
+        <a class="brand-logo center">Shopping List</a>
+      </div>
+    </nav>
+    <ul ></ul>
 
     <script>
       const electron = require("electron");
@@ -16,9 +21,11 @@
 
       const ul = document.querySelector("ul");
 
-      // item add
+      // Add item
       ipcRenderer.on("item:add", function(event, item) {
+        ul.className = 'collection';
         const li = document.createElement("li");
+        li.className = 'collection-item';
         const itemText = document.createTextNode(item);
         li.appendChild(itemText);
         ul.appendChild(li);
@@ -26,7 +33,8 @@
 
       // Items clear
       ipcRenderer.on("item:clear", function() {
-        ul.innerHTML = ''
+        ul.innerHTML = '';
+        ul.className = '';
       });
 
       // Individual item clear
@@ -34,6 +42,9 @@
 
       function removeItem(event){
         event.target.remove();
+        if(ul.children.length == 0){
+          ul.className = '';
+        }
       }
     </script>
   </body>
