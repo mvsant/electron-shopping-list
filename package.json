@@ -1,8 +1,8 @@
 {
   "name": "electron-shopping-list",
-  "productName": "electron-shopping-list",
+  "productName": "electron shopping list",
   "version": "1.0.0",
-  "description": "My Electron application description",
+  "description": "A shopping list containing some principles of Electron app development in your construction build.",
   "main": "src/index.js",
   "scripts": {
     "start": "electron-forge start",
