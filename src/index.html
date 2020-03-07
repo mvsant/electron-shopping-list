@@ -24,10 +24,17 @@
         ul.appendChild(li);
       });
 
-      // Item clear
+      // Items clear
       ipcRenderer.on("item:clear", function() {
         ul.innerHTML = ''
       });
+
+      // Individual item clear
+      ul. addEventListener('dblclick', removeItem);
+
+      function removeItem(event){
+        event.target.remove();
+      }
     </script>
   </body>
 </html>
