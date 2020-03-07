@@ -15,12 +15,23 @@ A project based on original Traversy tutorial, By the time it was made, this pro
 ## Build process
 
 To start after clone:
+
     npm i 
 To run the app:
+
     npm start
 __Note:__ You need to change the environment variable to development inside index.js file, in the line below:
+
     process.env.NODE_ENV = 'production';
 To create the application outputs:
+
+    npm run package-mac
+
+    npm run package-win
+
+    npm run package-linux
+
+*Watch carefully the package.json to change the windows app name and app description before make the build*
 
 ## Original source
 
