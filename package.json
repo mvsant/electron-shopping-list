@@ -75,8 +75,16 @@
     "electron": "^13.1.4",
 >>>>>>> main
     "electron-packager": "^15.0.0",
+<<<<<<< HEAD
+    "lodash": "^4.17.21",
+    "minimist": "^1.2.5"
+||||||| bb5bd67
+    "lodash": "^4.17.19",
+    "minimist": "^1.2.5"
+=======
     "lodash": "^4.17.19",
     "minimist": "^1.2.5",
     "trim-newlines": "^4.0.2"
+>>>>>>> main
   }
 }
