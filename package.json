@@ -60,7 +60,7 @@
     "electron": "^17.1.2",
     "electron-packager": "^15.4.0",
     "lodash": "^4.17.19",
-    "minimist": "^1.2.5",
+    "minimist": "^1.2.6",
     "trim-newlines": "^4.0.2"
   }
 }
