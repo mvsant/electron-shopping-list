@@ -52,10 +52,10 @@
     "meow": "^10.0.1"
   },
   "devDependencies": {
-    "@electron-forge/cli": "^6.0.0-beta.63",
+    "@electron-forge/cli": "^6.4.2",
     "@electron-forge/maker-deb": "^6.0.0-beta.63",
     "@electron-forge/maker-rpm": "^6.0.0-beta.63",
-    "@electron-forge/maker-squirrel": "^6.0.0-beta.63",
+    "@electron-forge/maker-squirrel": "^6.4.2",
     "@electron-forge/maker-zip": "^6.0.0-beta.63",
     "electron": "^39.8.5",
     "electron-packager": "^15.4.0",
